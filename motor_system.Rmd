@@ -1,0 +1,64 @@
+---
+title: "motor system"
+author: "Timing Liu"
+date: "11/04/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r}
+# install.packages("pdftools")
+library(pdftools)
+
+```
+```{r}
+text <- pdf_text("Motor System.pdf")
+typeof(text)
+length(text)
+# remove lecturer's information
+text <- text[2:length(text)]
+```
+
+
+```{r}
+library(tidyverse)
+text_df <- tibble(line = seq_along(text), text = text)
+
+```
+
+```{r}
+library(tidytext)
+data(stop_words)
+tidy_text_df <- text_df %>% 
+  unnest_tokens(word, text) %>% 
+  # remove stop words
+  anti_join(stop_words) %>% 
+  # remove digits
+  filter(!str_detect(word, "[:digit:]"))
+```
+### Stemming 
+
+```{r}
+# install.packages("SnowballC")
+library(SnowballC)
+stemmed_tidy_text_df <- 
+  tidy_text_df %>% 
+  mutate(word = wordStem(word))
+
+```
+
+
+### word cloud
+```{r}
+# install.packages("wordcloud")
+library(wordcloud)
+png("motor.png")
+wordcloud_plot <- tidy_text_df %>% 
+  count(word) %>% 
+  with(wordcloud(word, n, max.words = 100))
+wordcloud_plot
+dev.off()
+```
+
