@@ -11,6 +11,7 @@ What I do during revision 📑😛
 
 ## Possible topics (non-exclusive)
 - sentimental analysis 
+- removing plural words
 
 ## Copyright
 The code here is licensed with Apache License 2.0.  
