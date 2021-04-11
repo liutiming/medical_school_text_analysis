@@ -13,5 +13,5 @@ What I do during revision 📑😛
 - sentimental analysis 
 
 ## Copyright
-The code here is MIT lienced.  
+The code here is licensed wotj Apache License 2.0.  
 Notes not included to protect lecturers' copyrights. 
