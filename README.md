@@ -1,4 +1,4 @@
-# medical_school_text_analysis
+# medical school text analysis
 What I do during revision 📑😛
 
 ## Topics covered 
