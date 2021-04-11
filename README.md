@@ -11,3 +11,7 @@ What I do during revision 📑😛
 
 ## Possible topics (non-exclusive)
 - sentimental analysis 
+
+## Copyright
+The code here is MIT lienced.  
+Notes not included to protect lecturers' copyrights. 
