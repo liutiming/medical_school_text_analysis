@@ -51,6 +51,7 @@ stemmed_tidy_text_df <-
 
 
 ### word cloud
+I decided to continue with unstemmed texts this time to differentiate plural vs non-plural usages by the lecturer. 
 ```{r}
 # install.packages("wordcloud")
 library(wordcloud)
