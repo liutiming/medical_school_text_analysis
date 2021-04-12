@@ -8,11 +8,12 @@ What I do during revision 📑😛
 - removing digits
 - stemming 
 - word cloud 
+- custom font using `showtext`
+- rough plot with `rroughviz` and `ggrough`
 
 ## Possible topics (non-exhaustive)
 - sentimental analysis 
 - removing plural words without stemming 
-- rough graphics 
 - rayshader heatmap
 - compare different lecture series/subjects 
 
