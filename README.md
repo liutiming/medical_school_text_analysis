@@ -9,7 +9,7 @@ What I do during revision 📑😛
 - stemming 
 - word cloud 
 
-## Possible topics (non-exclusive)
+## Possible topics (non-exhaustive)
 - sentimental analysis 
 - removing plural words without stemming 
 - rough graphics 
