@@ -3,7 +3,7 @@ What I do during revision 📑😛
 
 ## Topics covered 
 - processing pdf text files 
-- `unnest`
+- `unnest_tokens`
 - removing stop words
 - removing digits
 - stemming 
