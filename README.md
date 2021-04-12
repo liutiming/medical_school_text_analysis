@@ -11,7 +11,10 @@ What I do during revision 📑😛
 
 ## Possible topics (non-exclusive)
 - sentimental analysis 
-- removing plural words
+- removing plural words without stemming 
+- rough graphics 
+- rayshader heatmap
+- compare different lecture series/subjects 
 
 ## Copyright
 The code here is licensed with Apache License 2.0.  
