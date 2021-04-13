@@ -25,7 +25,7 @@ text <- text[2:length(text)]
 
 ```{r}
 library(tidyverse)
-text_df <- tibble(line = seq_along(text), text = text)
+text_df <- tibble(page = seq_along(text), text = text)
 
 ```
 
@@ -106,5 +106,21 @@ stemmed_tidy_text_df %>%
   inner_join(stemmed_tidy_text_df) %>% 
   pull(word) %>% 
   rough_bar()
+```
+
+### Sentiment analysis
+```{r}
+afinn <- get_sentiments("afinn")
+tidy_text_df %>% 
+  inner_join(afinn) %>% 
+  group_by(page) %>% 
+  summarize(sentiment = sum(value)) %>% 
+  ggplot() +
+  aes(x = page, y = sentiment) %>% 
+  geom_line() +
+  theme_minimal(base_size = 30) +
+  labs(title = "Sentiment analysis of motor lectures using AFINN")
+
+ggsave("sentiment.png")
 ```
 
